@@ -48,7 +48,7 @@ class MovieListSerializer(MovieSerializer):
     actors = serializers.SlugRelatedField(
         many=True, read_only=True, slug_field="full_name"
     )
-    image = serializers.ImageField(source="movie.image", read_only=False, allow_null=True)
+    image = serializers.ImageField(source="movie.image", read_only=True, allow_null=True)
 
 
 class MovieDetailSerializer(MovieSerializer):
